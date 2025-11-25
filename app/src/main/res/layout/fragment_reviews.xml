@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/reviews_background">
+
+    <!-- Header Section -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/headerCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/primary"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center">
+
+            <!-- Overall Rating -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.7"
+                android:textColor="@color/white"
+                android:textSize="42sp"
+                android:textStyle="bold" />
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating="4.7"
+                android:stepSize="0.1"
+                android:isIndicator="true"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Based on 127 reviews"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Reviews Count and Filter -->
+    <LinearLayout
+        android:id="@+id/filterSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerCard"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/textViewReviewsCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="All Reviews (127)"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_background"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+
+    </LinearLayout>
+
+    <!-- Reviews List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewReviews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/filterSection"
+        android:layout_above="@+id/fabAddReview"
+        android:padding="8dp"
+        android:clipToPadding="false" />
+
+    <!-- Empty State -->
+    <LinearLayout
+        android:id="@+id/emptyStateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="40dp"
+        android:visibility="gone"
+        android:layout_below="@id/filterSection">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_empty_reviews"
+            android:tint="@color/secondary"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Reviews Yet"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Be the first to share your experience with our restaurant"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:lineSpacingExtra="4dp" />
+
+        <Button
+            android:id="@+id/buttonAddFirstReview"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:background="@drawable/button_primary_rounded"
+            android:text="Write First Review"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:layout_gravity="center"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp" />
+
+    </LinearLayout>
+
+    <!-- Add Review FAB -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="24dp"
+        android:src="@drawable/ic_add_white"
+        app:backgroundTint="@color/primary"
+        app:tint="@color/white" />
+
+</RelativeLayout>

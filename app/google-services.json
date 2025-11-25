@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "324059297032",
+    "project_id": "rest-f0faf",
+    "storage_bucket": "rest-f0faf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324059297032:android:c83b441c7969b7c1b7e8bd",
+        "android_client_info": {
+          "package_name": "com.example.rest_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ7ms2UZExcKbWNkgbmEHHgQDs7Gd2Ess"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

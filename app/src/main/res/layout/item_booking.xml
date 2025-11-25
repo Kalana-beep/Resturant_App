@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Booking Info -->
+        <LinearLayout
+            android:id="@+id/bookingInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toStartOf="@+id/buttonDelete"
+            android:layout_marginEnd="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/textViewName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Customer Name"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Confirmed"
+                    android:textColor="@color/primary"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/status_background"
+                    android:padding="4dp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textViewDateTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date and Time"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/textViewGuests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Number of Guests"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:layout_marginTop="2dp" />
+
+            <!-- Phone Number -->
+            <TextView
+                android:id="@+id/textViewPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone: +1234567890"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+
+        <!-- Delete Button - Rectangular with Text -->
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_delete_rectangular"
+            android:text="Delete"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:drawableStart="@drawable/ic_delete_white"
+            android:drawablePadding="4dp" />
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
